@@ -2,7 +2,7 @@ protocol: strand-protocol v1.0
 journal_schema: tasktree-journal-v1
 runtime: tasktree v0.1.1
 runtime_path: bin/tasktree.exe
-runtime_sha256: 8610b71aed64a7e0bcbeec9f3a90297109c220fb2d97414f365b42a2ee0281fd
+runtime_sha256: 0797befd2a00712dacdad98b0a21b116c9569cea624b075e62bccb6e6cc9432c
 rule: never edit journal manually; use tasktree CLI
 discover: bin/tasktree.exe --help
 version_check: bin/tasktree.exe --version
