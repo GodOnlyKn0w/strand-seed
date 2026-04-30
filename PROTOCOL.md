@@ -21,7 +21,7 @@ Record not just what you did, but why — the next session needs your reasoning.
 [decision] when choosing a path
 [correction] when wrong
 [progress] when done with a step
-[open] when pausing — marks where to resume
-[done] when complete
+[open] when stopping — the normal close. Tells next session where to resume.
+[done] only when the strand topic itself is finished, not when the task is done
 
 An empty .tasktree/journal.jsonl is a valid empty strand journal.

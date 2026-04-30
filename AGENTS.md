@@ -4,5 +4,6 @@ If tasktree list shows existing strands, show the most recently active strand be
 If no strands exist, create one before reconnaissance.
 If you get stuck, append before working around.
 
-Before move/delete/overwrite/commit/rebase/cleanup:
+Before rm, rmdir, mv, git commit, git rebase:
   bin/tasktree.exe list && bin/tasktree.exe show <current_strand>
+  Then append what you are about to do and why.
