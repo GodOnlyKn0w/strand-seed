@@ -1,8 +1,8 @@
 protocol: strand-protocol v1.0
 journal_schema: tasktree-journal-v1
-runtime: tasktree v0.1.1
+runtime: tasktree v0.1.2
 runtime_path: bin/tasktree.exe
-runtime_sha256: 0797befd2a00712dacdad98b0a21b116c9569cea624b075e62bccb6e6cc9432c
+runtime_sha256: 94cf4bdcb601475f9596bbeb499c417eac43314c5df3ce1d0a5c259828b625dd
 The journal is plain text JSONL and can be read directly by any tool.
 Never edit it manually. Write only through tasktree CLI.
 discover: bin/tasktree.exe --help
