@@ -1,5 +1,6 @@
 Read TASK.md first.
 
+Ensure bin/tasktree.exe is present. Download and verify per CHECKSUMS.md.
 Use bin/tasktree.exe for work memory.
 Use PROTOCOL.md only for runtime version, checksum, and spec link.
 
