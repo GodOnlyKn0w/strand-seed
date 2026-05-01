@@ -3,6 +3,7 @@ Read TASK.md first.
 Ensure bin/tasktree.exe is present. Download and verify per CHECKSUMS.md.
 Use bin/tasktree.exe for work memory.
 Use PROTOCOL.md only for runtime version, checksum, and spec link.
+Use REDACTION.md before publishing, redacting, or writing public evidence.
 
 Before reconnaissance:
   bin/tasktree.exe list
@@ -16,8 +17,37 @@ Record as you work, not after:
   [correction] when wrong
   [open] when stopping
 
-Before rm, rmdir, mv, git commit, git rebase, or any state-closing action:
-  bin/tasktree.exe checkpoint --id <current_strand> --action "<action and reason>"
+Checkpoint rule:
+  observe -> checkpoint -> act
+
+Checkpoint is not a save point.
+It is a pre-action attribution anchor.
+
+Before any state-closing action, observe the relevant state, then run checkpoint,
+then act only if checkpoint exits 0.
+
+State-closing actions include:
+  commit, push, merge, tag, delete, move, overwrite, redact, publish,
+  close PR, mark done, declare verdict
+
+Observation means reading the current relevant state:
+  git: status, diff, staged diff, log, branch
+  files: list target paths and inspect affected content
+  reports: read the section being closed
+  release/publish: run redaction and checksum checks
+  experiment verdict: re-read primary evidence, not only summaries
+
+Run:
+  bin/tasktree.exe checkpoint --id <current_strand> --action "<intended action, observed state, and reason>"
+
+Continue only if checkpoint exits 0.
+If checkpoint fails, stop. Do not perform the intended action.
+
+Journal is append-only.
+Do not edit existing journal entries.
+If a record is wrong, append a correction.
+
+Checkpoint records observable action attribution, not private knowledge provenance.
 
 If you get stuck, append before working around.
 When stopping, append [open] with current status and what remains.
