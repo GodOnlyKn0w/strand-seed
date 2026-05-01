@@ -1,2 +1,5 @@
 .tasktree/*
 !.tasktree/journal.jsonl
+
+# Binary is not checked in — downloaded from release (see CHECKSUMS.md)
+bin/tasktree.exe
