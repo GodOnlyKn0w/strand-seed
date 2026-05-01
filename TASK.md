@@ -1,16 +1,23 @@
 Task summary here.
 
-Each step:
+Current strand:
+  <strand_id or create one before work>
 
-Step 1: <action>
-  → bin/tasktree.exe append "[decision] Plan: <what and why>"
-  → checkpoint: bin/tasktree.exe list && bin/tasktree.exe show <id>
-  → execute
-  → verify
-  → bin/tasktree.exe append "[progress] <result>" or "[friction] <block>"
+Before starting, follow AGENTS.md and create or resume a strand.
 
-Step N: ...
+Steps:
 
-End with [done] if complete, [open] if paused.
+1. <action>
+2. <action>
+3. <action>
 
-Before destructive actions: follow the checkpoint rule in AGENTS.md.
+Acceptance:
+
+- <check>
+- <check>
+- <check>
+
+Put final artifacts in output/.
+Before destructive actions, follow the checkpoint rule in AGENTS.md.
+When stopping, append [open] with current status and what remains.
+Use [done] only if this strand should never be resumed.
