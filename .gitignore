@@ -3,3 +3,7 @@
 
 # Binary is not checked in — downloaded from release (see CHECKSUMS.md)
 bin/tasktree.exe
+.packets/config.json
+.packets/outbox/*
+.packets/inbox/*
+!.packets/config.example.json

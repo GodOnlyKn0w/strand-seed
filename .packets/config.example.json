@@ -1,0 +1,11 @@
+{
+  "packet_search_roots": [
+    ".packets/outbox",
+    ".packets/inbox",
+    ".packets/processed"
+  ],
+  "scope_aliases": {
+    "local:this-project": "./",
+    "remote:other-project": "../other-project"
+  }
+}

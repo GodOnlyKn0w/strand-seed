@@ -55,3 +55,31 @@ When stopping, append [open] with current status and what remains.
 If command usage is unclear:
   bin/tasktree.exe --help
   bin/tasktree.exe <command> --help
+
+## Packet
+
+Before each session, check inbox:
+
+    ls .packets/inbox/
+
+If packets exist, consume each one before starting work.
+
+### Consume
+
+    Read .packets/inbox/<id>.jsonl
+    If .packets/processed/<semantic_hash>.seen exists → skip
+    If .packets/processed/<id>.ack exists → skip
+    Append to active strand:
+      constrain → "[decision] imported constrain: <body> source_packet: <id>"
+      incident  → "[observation] incident: <body>"
+      next_open → "[open] <body>"
+      status    → "[observation] status: <body>"
+    touch .packets/processed/<id>.ack
+    touch .packets/processed/<semantic_hash>.seen
+
+### Send
+
+    Write packet JSONL to .packets/outbox/<id>.jsonl
+    Copy to target project's .packets/inbox/
+
+See https://github.com/GodOnlyKn0w/packet-protocol for format.
