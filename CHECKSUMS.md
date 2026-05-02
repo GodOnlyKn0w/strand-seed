@@ -3,10 +3,10 @@
 tasktree.exe is not included in this repository.
 
 Download from GitHub Releases:
-https://github.com/GodOnlyKn0w/tasktree-core/releases/tag/v0.1.3
+https://github.com/GodOnlyKn0w/tasktree-core/releases/tag/v0.1.4
 
 Expected checksum (SHA256):
-b3b8fe18e6cad9e9a5aec865019c46ded4a6def3db400958f5e053b41afb8994
+6b8f847b447bbe30ac17647e15612cbd5041bcbbb62cc042a3298e8b58fb0d82
 
 Place in bin/tasktree.exe before starting work.
 
