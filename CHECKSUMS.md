@@ -3,7 +3,7 @@
 tasktree.exe is not included in this repository.
 
 Download from GitHub Releases:
-https://github.com/GodOnlyKn0w/strand-seed/releases/tag/v0.1.4
+https://github.com/GodOnlyKn0w/strand-seed/releases/tag/v0.1.4-binary
 
 Expected checksum (SHA256):
 4609d6c4c17008a150e8ecd56fed4586974aa137d866e0e4971b8568889e9b77
