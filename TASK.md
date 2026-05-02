@@ -1,23 +1,35 @@
-Task summary here.
+# TASK: Bootstrap a Cold-Start Agent
 
-Current strand:
-  <strand_id or create one before work>
+This is a cold-start test for strand-seed. You have only this file
+and the repository contents. Do not ask questions. Work independently.
 
-Before starting, follow AGENTS.md and create or resume a strand.
+## Setup
 
-Steps:
+1. Verify the tasktree binary:
+   - Check CHECKSUMS.md for the expected SHA256
+   - Run `bin/tasktree.exe --version`
+   - If the binary is missing or wrong checksum, follow CHECKSUMS.md to download
 
-1. <action>
-2. <action>
-3. <action>
+2. Read AGENTS.md. Follow its rules for checkpoint, journal, and strand creation.
 
-Acceptance:
+## Task
 
-- <check>
-- <check>
-- <check>
+Run `bin/tasktree.exe list` to see existing strands.
+Create a new strand and record three observations about this repository:
 
-Put final artifacts in output/.
-Before destructive actions, follow the checkpoint rule in AGENTS.md.
-When stopping, append [open] with current status and what remains.
-Use [done] only if this strand should never be resumed.
+1. What files and directories exist here?
+2. What do CHECKSUMS.md and PROTOCOL.md say this repository is for?
+3. Is there a Packet inbox with pending messages? Check `.packets/inbox/`.
+
+Append each observation to your strand.
+
+## Output
+
+Create `output/summary.txt` with:
+- The strand ID you created
+- A one-line summary of what this repository is for
+- Whether you found any pending packets
+
+## Checkpoint
+
+Before any state-closing action, follow AGENTS.md checkpoint rule.
