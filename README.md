@@ -9,3 +9,7 @@ A drop-in folder for agent work.
 
 Supports [Packet v3](https://github.com/GodOnlyKn0w/packet-protocol)
 for cross-boundary constraint delivery.
+
+The tasktree journal is excluded from Git (see AGENTS.md).
+Git snapshots the code; tasktree records the agent's thinking.
+They are separate timelines, connected by git.head in each entry.

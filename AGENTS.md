@@ -47,6 +47,23 @@ Journal is append-only.
 Do not edit existing journal entries.
 If a record is wrong, append a correction.
 
+## Journal and Git
+
+The journal (.tasktree/journal.jsonl) is your runtime memory.
+It is NOT tracked by Git. This is intentional:
+
+- Git manages version snapshots. tasktree manages event streams.
+- If the journal were tracked, git checkout/stash/branch switch
+  would replace it with an older version — silent timeline fork.
+- Instead, each entry records git.head as an observation anchor.
+  This preserves the causal link without coupling the two timelines.
+
+To create a citable snapshot for evidence or publication:
+
+    bin/tasktree.exe export --out evidence/journal-export.jsonl
+
+The export file can be committed to Git.
+
 Checkpoint records observable action attribution, not private knowledge provenance.
 
 If you get stuck, append before working around.
