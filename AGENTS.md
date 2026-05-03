@@ -38,7 +38,13 @@ Observation means reading the current relevant state:
   experiment verdict: re-read primary evidence, not only summaries
 
 Run:
-  bin/tasktree.exe checkpoint --id <current_strand> --action "<intended action, observed state, and reason>"
+  bin/tasktree.exe checkpoint --id <current_strand> \
+    --observed "<domain list>" \
+    --action "<prefix>: <scope>"
+
+--observed records what was looked at (git.status, tasktree.tail, files.target).
+--action records what is intended (commit: fix link, delete: temp files).
+See bin/tasktree.exe checkpoint --help for full usage.
 
 Continue only if checkpoint exits 0.
 If checkpoint fails, stop. Do not perform the intended action.
@@ -63,6 +69,10 @@ To create a citable snapshot for evidence or publication:
     bin/tasktree.exe export --out evidence/journal-export.jsonl
 
 The export file can be committed to Git.
+
+To check journal integrity:
+
+    bin/tasktree.exe doctor journal
 
 Checkpoint records observable action attribution, not private knowledge provenance.
 
